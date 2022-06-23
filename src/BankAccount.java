@@ -15,6 +15,9 @@ public class BankAccount {
         return balance;
     }
 
+    public String getFullName() {
+        return firstName + " " + lastName;
+    }
 
     public void deposit(float depositAmount) {
         this.balance += depositAmount;
