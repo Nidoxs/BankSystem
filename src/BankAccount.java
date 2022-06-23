@@ -3,15 +3,15 @@ public class BankAccount {
     int accountId;
     String firstName;
     String lastName;
-    float balance;
+    double balance;
 
-    public BankAccount(String firstName, String lastName, int startingBalance) {
+    public BankAccount(String firstName, String lastName, double startingBalance) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.balance = Math.max(startingBalance, 0);
     }
 
-    public float getBalance() {
+    public double getBalance() {
         return balance;
     }
 
@@ -19,11 +19,11 @@ public class BankAccount {
         return firstName + " " + lastName;
     }
 
-    public void deposit(float depositAmount) {
+    public void deposit(double depositAmount) {
         this.balance += depositAmount;
     }
 
-    public String withdraw(float withdrawAmount) {
+    public String withdraw(double withdrawAmount) {
         if(this.balance < withdrawAmount) {
             return "You do not have enough money to withdraw that amount.";
         } else {
